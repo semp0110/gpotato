@@ -25,3 +25,5 @@ nbdist/
 .nb-gradle/
 
 classes
+
+##테스트
