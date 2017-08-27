@@ -5,15 +5,23 @@
     <persistence-unit name="jpatest">
 
 
-        <class>com.gpotato.entities.Member</class>
-        <class>com.gpotato.entities.Member1</class>
+        <!--<class>com.gpotato.entities.Member</class>
+        <class>com.gpotato.entities.Member1</class>-->
+        <class>com.gpotato.entities.Members</class>
+        <class>com.gpotato.entities.Teams</class>
         <properties>
 
             <!-- 필수 속성 -->
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <!--<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.user" value="webdev"/>
             <property name="javax.persistence.jdbc.password" value="(webdev)"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://webdevdb.chdkmas1tznm.ap-northeast-2.rds.amazonaws.com:3306/webtest"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />-->
+
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="#semp0110#"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:32769/webtest"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
 
             <!-- 옵션 -->

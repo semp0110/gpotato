@@ -14,7 +14,7 @@ public class JpaMain
 {
     public static void main(String[] args)
     {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpatest");
+        /*EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpatest");
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
 
@@ -31,7 +31,7 @@ public class JpaMain
         {
             em.close();
         }
-        emf.close();
+        emf.close();*/
     }
     private static void logic(EntityManager em){
         /*Member member = new Member();
