@@ -50,5 +50,7 @@ public class JpaMain1 {
         mem1.setUsername("박시후");
         mem1.setTeam(team1);
         em.persist(mem1);
+
+        System.out.println("count : " + team1.getMembers().size());
     }
 }

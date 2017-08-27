@@ -3,102 +3,50 @@ package com.gpotato.entities;
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
 import java.lang.annotation.Inherited;
+import java.util.Date;
 
 /**
  * Created by hirang on 2017-08-14.
  */
 @Entity
-@Table(name="tbl_members1")
+@Table(name="tbl_member1", uniqueConstraints = {@UniqueConstraint( //추가 //**
+        name = "NAME_AGE_UNIQUE",
+        columnNames = {"NAME", "AGE"} )})
 public class Member1 {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
-    private Integer id;
+    private String id;
 
-    @Column(name = "NAME")
+    @Column(name = "NAME", nullable = false, length = 10) //추가 //**
+//    @Column(name = "NAME") //추가 //**
     private String username;
 
-    @Column(name = "AGE")
     private Integer age;
 
-    @Column(name = "IsMarried")
-    private Boolean married;
-
-    @Column(name = "Con")
-    private Integer con;
-
-    @Column(name = "IntegerToString")
-    private Integer  its;
-
-    @Column(name = "StringToInteger")
-    private Integer sti;
-
-    @Column(name = "RoleType")
+    //=== 추가
     @Enumerated(EnumType.STRING)
-    private RoleType roletype;
+    private RoleType roleType;
 
-    public RoleType getRoletype()
-    {
-        return roletype;
-    }
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdDate;
 
-    public void setRoletype(RoleType roletype)
-    {
-        this.roletype = roletype;
-    }
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastModifiedDate;
 
-    public Integer getId()
-    {
+    @Lob
+    private String description;
+
+    @Transient
+    private String temp;
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id)
-    {
+    public void setId(String id) {
         this.id = id;
     }
-
-    public Integer getSti()
-    {
-        return sti;
-    }
-
-    public void setSti(Integer sti)
-    {
-        this.sti = sti;
-    }
-
-    public Integer getIts()
-    {
-        return its;
-    }
-
-    public void setIts(Integer its)
-    {
-        this.its = its;
-    }
-
-    public Boolean getMarried()
-    {
-        return married;
-    }
-
-    public void setMarried(Boolean married)
-    {
-        this.married = married;
-    }
-
-    public Integer getCon()
-    {
-        return con;
-    }
-
-    public void setCon(Integer con)
-    {
-        this.con = con;
-    }
-
-
 
     public String getUsername() {
         return username;
@@ -110,16 +58,50 @@ public class Member1 {
 
     public Integer getAge() {
         return age;
-    }
+    }ß
 
     public void setAge(Integer age) {
         this.age = age;
     }
 
-    public enum RoleType{
-        ADMIN,
-        USER,
-        GUEST
+    public RoleType getRoleType() {
+        return roleType;
+    }
+
+    public void setRoleType(RoleType roleType) {
+        this.roleType = roleType;
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public Date getLastModifiedDate() {
+        return lastModifiedDate;
+    }
+
+    public void setLastModifiedDate(Date lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getTemp() {
+        return temp;
+    }
+
+    public void setTemp(String temp) {
+        this.temp = temp;
     }
 }
 

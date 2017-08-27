@@ -7,7 +7,7 @@ import java.lang.annotation.Inherited;
  * Created by hirang on 2017-08-14.
  */
 @Entity
-@Table(name="tbl_members")
+@Table(name="tbl_member")
 public class Member {
 
     @Id
