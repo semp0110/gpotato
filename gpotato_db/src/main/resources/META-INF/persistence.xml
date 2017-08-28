@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="jpastudy">
-        <class>com.gpotato.entities.Member</class>
+        <class>com.gpotato.entities.ConsistenceMember</class>
+        <class>com.gpotato.entities.EntityMember</class>
+        <class>com.gpotato.entities.OneDirectionMember</class>
+        <class>com.gpotato.entities.OneDirectionTeam</class>
+        <class>com.gpotato.entities.OneDirectionLocker</class>
+        <class>com.gpotato.entities.OneDirectionProduct</class>
+        <class>com.gpotato.entities.BothDirectionMember</class>
+        <class>com.gpotato.entities.BothDirectionTeam</class>
+        <class>com.gpotato.entities.BothDirectionLocker</class>
+        <class>com.gpotato.entities.BothDirectionProduct</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.user" value="root"/>
-            <property name="javax.persistence.jdbc.password" value="#semp0110#"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:32769/webtest"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="javax.persistence.jdbc.user" value="webdev"/>
+            <property name="javax.persistence.jdbc.password" value="(webdev)"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://webdevdb.chdkmas1tznm.ap-northeast-2.rds.amazonaws.com:3306/webtest"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+
+            <!--<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>-->
+            <!--<property name="javax.persistence.jdbc.user" value="root"/>-->
+            <!--<property name="javax.persistence.jdbc.password" value="#semp0110#"/>-->
+            <!--<property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:32769/webtest"/>-->
+            <!--<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>-->
+
             <property name="hibernate.connection.CharSet" value="utf8" />
             <property name="hibernate.connection.characterEncoding" value="utf8" />
             <property name="hibernate.connection.useUnicode" value="true" />

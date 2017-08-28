@@ -7,8 +7,8 @@ import java.lang.annotation.Inherited;
  * Created by hirang on 2017-08-14.
  */
 @Entity
-@Table(name="tbl_member")
-public class Member {
+@Table(name="tbl_consist_member")
+public class ConsistenceMember {
 
     @Id
     @Column(name = "id")

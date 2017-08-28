@@ -18,7 +18,7 @@ public class EntityMappingMain {
         try {
             tx.begin();
             //logic
-            tx.commit(); //flush가 자동 실행
+            tx.commit();
         } catch (Exception e) {
             tx.rollback();
         }

@@ -1,11 +1,6 @@
 package com.gpotato.db;
 
-import com.gpotato.entities.Member1;
-
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
 
 /**
  * Created by hirang on 2017-08-14.
@@ -41,18 +36,18 @@ public class JpaMain
 */
         //em.persist(member);
 
-        for (int i=0; i<10; i++){
-            Member1 member1 = new Member1();
-            //member1.setId(i);
-            member1.setUsername("9999999");
-            member1.setAge(3333);
-            member1.setMarried(true);
-            member1.setCon(123123212);
-            member1.setSti(1111);
-            member1.setRoletype(Member1.RoleType.GUEST);
-            em.persist(member1);
+//        for (int i=0; i<10; i++){
+//            Member1 member1 = new Member1();
+//            //member1.setId(i);
+//            member1.setUsername("9999999");
+//            member1.setAge(3333);
+//            member1.setMarried(true);
+//            member1.setCon(123123212);
+//            member1.setSti(1111);
+//            member1.setRoletype(Member1.RoleType.GUEST);
+//            em.persist(member1);
 
-        }
+//        }
 
 
         //등록
