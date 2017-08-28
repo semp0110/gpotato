@@ -19,7 +19,7 @@ public class MappingMain
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
 
-        DirectionType dType = DirectionType.ONE_DIRECTION;
+        DirectionType dType = DirectionType.BOTH_DIRECTION;
         MappingType mType = MappingType.MANY_TO_MANY;
         try {
             tx.begin();
@@ -102,7 +102,29 @@ public class MappingMain
         em.persist(member1);
     }
     public static void execBothDirectionMany(EntityManager em){
+        BothDirectionProduct productA = new BothDirectionProduct();
+        productA.setId("productA");
+        productA.setName("상품A");
+        em.persist(productA);
 
+        BothDirectionProduct productB = new BothDirectionProduct();
+        productB.setId("productB");
+        productB.setName("상품B");
+        em.persist(productB);
+
+        BothDirectionMember member1 = new BothDirectionMember();
+        member1.setId("member1");
+        member1.setUsername("회원1");
+        member1.getProducts().add(productA);
+        member1.getProducts().add(productB);
+        em.persist(member1);
+
+        BothDirectionMember member2 = new BothDirectionMember();
+        member2.setId("member2");
+        member2.setUsername("회원2");
+        member2.getProducts().add(productA);
+        member2.getProducts().add(productB);
+        em.persist(member2);
     }
 
     public static void queryLogicJoin(EntityManager em){

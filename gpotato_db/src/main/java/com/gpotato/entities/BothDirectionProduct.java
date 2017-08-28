@@ -13,6 +13,8 @@ public class BothDirectionProduct
     @Id @Column(name = "PRODUCT_ID")
     private String id;
 
+    private String name;
+
     @ManyToMany(mappedBy = "products")
     private List<BothDirectionMember> members;
 
@@ -34,5 +36,15 @@ public class BothDirectionProduct
     public void setMembers(List<BothDirectionMember> members)
     {
         this.members = members;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
     }
 }
