@@ -101,7 +101,8 @@ public class MappingMain
         member1.getProducts().add(productB);
         em.persist(member1);
     }
-    public static void execBothDirectionMany(EntityManager em){
+    public static void execBothDirectionMany(EntityManager em)
+    {
         BothDirectionProduct productA = new BothDirectionProduct();
         productA.setId("productA");
         productA.setName("상품A");
@@ -127,16 +128,19 @@ public class MappingMain
         em.persist(member2);
     }
 
-    public static void queryLogicJoin(EntityManager em){
+    public static void queryLogicJoin(EntityManager em)
+    {
         String jpql = "select m from OneDirectionMember m join m.team t where t.name=:teamName";
         List<OneDirectionMember> resultList = em.createQuery(jpql, OneDirectionMember.class)
                 .setParameter("teamName", "팀1")
                 .getResultList();
-        for(OneDirectionMember member : resultList){
+        for (OneDirectionMember member : resultList)
+        {
             System.out.println("One Direction member.username=" + member.getUsername());
         }
-
     }
+
+
 
     enum DirectionType{
         ONE_DIRECTION,

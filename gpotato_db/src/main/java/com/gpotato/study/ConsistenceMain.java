@@ -2,7 +2,10 @@ package com.gpotato.study;
 
 import com.gpotato.entities.ConsistenceMember;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 import java.util.List;
 
 /**
@@ -14,7 +17,7 @@ public class ConsistenceMain {
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
 
-        PersisType eType = PersisType.PERSIST;
+        PersisType eType = PersisType.CLEAR;
 
         try {
             tx.begin();
@@ -85,6 +88,8 @@ public class ConsistenceMain {
     public static ConsistenceMember execDetach(EntityManager em){
         execPersist(em);
         em.flush();
+        ConsistenceMember mem1 = em.find(ConsistenceMember.class,"danhu" );
+        mem1.setAge(10000);
         ConsistenceMember mem = em.find(ConsistenceMember.class, "hirang");
         em.detach(mem);
         mem.setAge(1000);
@@ -93,7 +98,7 @@ public class ConsistenceMain {
 
     public static void execDetachMerge(EntityManager em){
         ConsistenceMember mem = execDetach(em);
-        mem.setAge(500);
+        //mem.setAge(500);
         em.merge(mem);
     }
 

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="0.0">com.gpotato.entities.BothDirectionProduct</node>
+    <node x="518.0" y="23.0">com.gpotato.entities.OneDirectionLocker</node>
+    <node x="181.83333333333326" y="561.0">com.gpotato.entities.BothDirectionLocker</node>
+    <node x="258.99999999999994" y="0.0">com.gpotato.entities.BothDirectionTeam</node>
+    <node x="662.0" y="228.0">com.gpotato.entities.OneDirectionMember</node>
+    <node x="732.0" y="23.0">com.gpotato.entities.OneDirectionProduct</node>
+    <node x="951.0" y="23.0">com.gpotato.entities.OneDirectionTeam</node>
+    <node x="129.33333333333326" y="228.0">com.gpotato.entities.BothDirectionMember</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.gpotato.entities.BothDirectionProduct" target="com.gpotato.entities.BothDirectionMember">
+      <point x="79.66666666666669" y="84.0" />
+      <point x="199.16666666666669" y="188.0" />
+      <point x="250.40476190476187" y="188.0" />
+      <point x="-48.42857142857139" y="-141.5" />
+    </edge>
+    <edge source="com.gpotato.entities.BothDirectionLocker" target="com.gpotato.entities.BothDirectionMember">
+      <point x="0.0" y="-84.0" />
+      <point x="0.0" y="141.5" />
+    </edge>
+    <edge source="com.gpotato.entities.BothDirectionMember" target="com.gpotato.entities.BothDirectionTeam">
+      <point x="0.0" y="-141.5" />
+      <point x="-79.66666666666669" y="84.0" />
+    </edge>
+    <edge source="com.gpotato.entities.BothDirectionTeam" target="com.gpotato.entities.BothDirectionMember">
+      <point x="0.0" y="84.0" />
+      <point x="378.49999999999994" y="208.0" />
+      <point x="347.2619047619047" y="208.0" />
+      <point x="48.428571428571445" y="-141.5" />
+    </edge>
+    <edge source="com.gpotato.entities.OneDirectionMember" target="com.gpotato.entities.OneDirectionLocker">
+      <point x="-127.125" y="-141.5" />
+      <point x="704.375" y="208.0" />
+      <point x="663.5" y="208.0" />
+      <point x="48.5" y="61.0" />
+    </edge>
+    <edge source="com.gpotato.entities.OneDirectionMember" target="com.gpotato.entities.OneDirectionTeam">
+      <point x="127.125" y="-141.5" />
+      <point x="958.625" y="208.0" />
+      <point x="1050.5" y="208.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="com.gpotato.entities.BothDirectionMember" target="com.gpotato.entities.BothDirectionProduct">
+      <point x="-145.28571428571428" y="-141.5" />
+      <point x="153.54761904761898" y="208.0" />
+      <point x="39.83333333333337" y="208.0" />
+      <point x="-79.66666666666667" y="84.0" />
+    </edge>
+    <edge source="com.gpotato.entities.BothDirectionMember" target="com.gpotato.entities.OneDirectionLocker">
+      <point x="145.28571428571428" y="-141.5" />
+      <point x="444.11904761904754" y="208.0" />
+      <point x="566.5" y="208.0" />
+      <point x="-48.5" y="61.0" />
+    </edge>
+    <edge source="com.gpotato.entities.OneDirectionMember" target="com.gpotato.entities.OneDirectionProduct">
+      <point x="42.375" y="-141.5" />
+      <point x="873.875" y="208.0" />
+      <point x="881.25" y="208.0" />
+      <point x="49.75" y="61.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7999999999999997" x="369.50000000000034" y="342.12500000000017" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
