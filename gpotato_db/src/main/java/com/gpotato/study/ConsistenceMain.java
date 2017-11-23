@@ -17,7 +17,7 @@ public class ConsistenceMain {
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
 
-        PersisType eType = PersisType.CLEAR;
+        PersisType eType = PersisType.PERSIST;
 
         try {
             tx.begin();

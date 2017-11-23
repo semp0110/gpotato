@@ -15,7 +15,9 @@
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.user" value="webdev"/>
             <property name="javax.persistence.jdbc.password" value="(webdev)"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://webdevdb.chdkmas1tznm.ap-northeast-2.rds.amazonaws.com:3306/webtest"/>
+            <!--<property name="javax.persistence.jdbc.url" value="jdbc:mysql://webdevdb.chdkmas1tznm.ap-northeast-2.rds.amazonaws.com:3306/webtest"/>-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://webdev-aurora-cluster.cluster-chdkmas1tznm.ap-northeast-2.rds.amazonaws.com:3306/webtest"/>
+
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
 
             <!--<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>-->
